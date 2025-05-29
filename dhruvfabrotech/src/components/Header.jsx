@@ -245,7 +245,7 @@ const videos = [
           </div>
         ))}
       </div>
-                    <Link to="/product">
+      <Link to="/product">
       <button className="view-all-btn">View All Categories</button>
       </Link>
     </section>

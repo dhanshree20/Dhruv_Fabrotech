@@ -1,6 +1,7 @@
 import React from "react";
 import './IndustrialFermenter.css';
 import { Link } from "react-router-dom";
+import './LaboratoryFermenter.css';
 
 const ProductDetail = ({ product }) => {
   return (

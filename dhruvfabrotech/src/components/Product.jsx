@@ -22,7 +22,8 @@ const cardData = [
     lines: [
       'Manufacturer Of Industrial Fermenter- Maharashtra',
       'Industrial Fermenter- In Maharashtra'
-    ]
+    ],
+    link: "/laboratory"
   },
   {
     title: 'Bioreactor',
