@@ -7,6 +7,7 @@ import AboutUs from './components/AboutUs';
 import Product from './components/Product';
 import IndustrialFermenter from './components/IndustrialFermenter';
 import LaboratoryFermenter from './components/LaboratoryFermenter';
+import Bioreactor from './components/Bioreactor';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" Component={ContactUs} />
         <Route path="/industrial" Component={IndustrialFermenter} />
         <Route path="/laboratory" Component={LaboratoryFermenter} />
+        <Route path="/bioreactor" Component={Bioreactor} />
       </Routes>
     </Router>
  

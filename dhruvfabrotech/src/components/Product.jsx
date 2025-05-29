@@ -32,7 +32,8 @@ const cardData = [
       'Bio Fertilizer Making Machine',
       'Autoclavable Glass Fermenter',
       'Cell Culture Bioreactor'
-    ]
+    ],
+    link: "/bioreactor"
   },
   {
     title: 'Batch Type Fermenter',
