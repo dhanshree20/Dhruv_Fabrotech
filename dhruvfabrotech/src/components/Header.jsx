@@ -244,10 +244,10 @@ const videos = [
             </div>
           </div>
         ))}
-              <Link to="/product">
-      <button className="learn-more">View All Categories</button>
-      </Link>
       </div>
+                    <Link to="/product">
+      <button className="view-all-btn">View All Categories</button>
+      </Link>
     </section>
 
 

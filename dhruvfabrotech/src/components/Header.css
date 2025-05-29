@@ -318,6 +318,24 @@ header {
   border: 1px rgb(168, 5, 5) solid;
 }
 
+.view-all-btn {
+    background-color: rgb(168, 5, 5);
+  color: #fff;
+  padding: 10px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.view-all-btn:hover {
+    background-color: white;
+  color: rgb(168, 5, 5);
+  border: 1px rgb(168, 5, 5) solid;
+}
+
 
 
 /* part 4 */
