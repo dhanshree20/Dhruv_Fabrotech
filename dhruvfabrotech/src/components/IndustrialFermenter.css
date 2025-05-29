@@ -58,9 +58,9 @@
 }
 
 .enquire-btn10 {
-  border: 1px solid red;
+  border: 1px solid rgb(168, 5, 5);
   background: transparent;
-  color: red;
+  color: rgb(168, 5, 5);
   padding: 8px 16px;
   font-weight: bold;
   cursor: pointer;
@@ -68,7 +68,7 @@
 }
 
 .enquire-btn10:hover {
-  background-color: red;
+  background-color: rgb(168, 5, 5);
   color: white;
 }
 
@@ -192,7 +192,7 @@
 }
 
 .interest-btn {
-  background: rgb(249, 63, 63);
+  background: rgb(168, 5, 5);
   color: white;
   padding: 12px 25px;
   font-size: 1rem;
@@ -202,9 +202,9 @@
 }
 
 .interest-btn:hover {
-  background-color: red;
-  color: white;
-  border: 1px red solid;
+  background-color:white;
+  color: rgb(168, 5, 5);
+  border: 1px rgb(168, 5, 5) solid;
 }
 
 /* last part */
