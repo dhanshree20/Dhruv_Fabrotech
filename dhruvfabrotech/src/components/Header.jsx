@@ -4,11 +4,13 @@ import './Header.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaWhatsapp, FaTwitter, FaYoutube } from 'react-icons/fa';
 import farmerImage from '../assets/ourstory.webp';
 import herosImage from "../assets/homepageimg1.avif";
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { CiDeliveryTruck } from "react-icons/ci";
 import { AiOutlineProduct } from "react-icons/ai";
 import { MdOutlineHighQuality } from "react-icons/md";
 import { RiMessage2Line } from "react-icons/ri";
+import { FaArrowUp } from 'react-icons/fa';
+
 
 const Header = () => {
 
@@ -156,6 +158,23 @@ const videos = [
 
     return () => clearInterval(interval);
   }, []);
+
+
+  // scroll bar
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header>
@@ -324,6 +343,10 @@ const videos = [
       </div>
     </div>
 
+
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          <FaArrowUp />
+        </button>
 
 
     <footer className="footer10">

@@ -3,6 +3,7 @@ import './IndustrialFermenter.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaWhatsapp, FaTwitter, FaPhoneAlt,FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import ProductDetail from "./ProductDetail";
+import { useRef, useEffect, useState } from 'react';
 import img1 from "../assets/industry1.webp";
 import img2 from "../assets/industry2.webp";
 import img3 from "../assets/industry3.webp";
@@ -19,8 +20,26 @@ import img13 from "../assets/industry13.webp";
 import img14 from "../assets/industry14.webp";
 import img15 from "../assets/industry15.webp";
 import img16 from "../assets/industry16.webp";
+import { FaArrowUp } from 'react-icons/fa';
 
 const IndustrialFermenter = () => {
+
+  
+    // scroll bar
+  
+    const [showScrollTop, setShowScrollTop] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     const products = [
   {
@@ -352,6 +371,10 @@ const IndustrialFermenter = () => {
         <ProductDetail key={index} product={product} />
       ))}
     </div>
+
+            <button className="scroll-to-top" onClick={scrollToTop}>
+              <FaArrowUp />
+            </button>
 
        <footer className="footer10">
             <div className="footer-top10">

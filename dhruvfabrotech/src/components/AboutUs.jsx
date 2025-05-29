@@ -12,6 +12,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaScaleBalanced } from "react-icons/fa6";
 import { IoDiamondOutline } from "react-icons/io5";
 import { LuAlarmClockPlus } from "react-icons/lu";
+import { FaArrowUp } from 'react-icons/fa';
 
 const AboutUs = () => {
 
@@ -154,6 +155,23 @@ const InfoTable = ({ title, data }) => (
     </table>
   </div>
 );
+
+
+  // scroll bar
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header>
@@ -324,6 +342,11 @@ const InfoTable = ({ title, data }) => (
        <Link to = "/contact">  <button className="secondary">Schedule Visit</button></Link>
       </div>
     </div>
+
+
+            <button className="scroll-to-top" onClick={scrollToTop}>
+              <FaArrowUp />
+            </button>
 
     
         <footer className="footer10">

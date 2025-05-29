@@ -8,7 +8,26 @@ import { MdLocationOn } from "react-icons/md";
 import { IoCallSharp } from "react-icons/io5";
 import { BiSolidFactory } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
+import { useRef, useEffect, useState } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 const ContactUs = () => {
+
+  
+    // scroll bar
+  
+    const [showScrollTop, setShowScrollTop] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
   return (
 
    <div>
@@ -126,6 +145,10 @@ const ContactUs = () => {
         </div>
       </div>
       </div>
+
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          <FaArrowUp />
+        </button>
 
        <footer className="footer10">
             <div className="footer-top10">

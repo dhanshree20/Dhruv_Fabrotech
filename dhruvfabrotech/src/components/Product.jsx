@@ -2,9 +2,28 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import './Product.css';
 import { FaPhone,FaBullseye,FaEye,FaRocket, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaWhatsapp, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
+
 
 const Product = () => {
+
+  
+    // scroll bar
+  
+    const [showScrollTop, setShowScrollTop] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
 const cardData = [
   {
@@ -300,6 +319,10 @@ const cardData = [
       <Link to = "/contact">  <button className="btn secondary">Schedule Visit</button></Link>
       </div>
     </div>
+
+            <button className="scroll-to-top" onClick={scrollToTop}>
+              <FaArrowUp />
+            </button>
 
 
 

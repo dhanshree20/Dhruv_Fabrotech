@@ -2,6 +2,7 @@ import React from "react"
 import './LaboratoryFermenter.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaWhatsapp, FaTwitter, FaPhoneAlt,FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useRef, useEffect, useState } from 'react';
 import ProductDetail from "./ProductDetail";
 import img1 from "../assets/laboratory1.webp";
 import img2 from "../assets/laboratory2.webp";
@@ -17,9 +18,27 @@ import img11 from "../assets/laboratory11.webp";
 import img12 from "../assets/laboratory12.webp";
 import img13 from "../assets/laboratory13.webp";
 import img14 from "../assets/laboratory14.webp";
+import { FaArrowUp } from 'react-icons/fa';
 
 
 const LaboratoryFermenter = () => {
+
+  
+    // scroll bar
+  
+    const [showScrollTop, setShowScrollTop] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
      const products = [
       {
@@ -322,6 +341,10 @@ const LaboratoryFermenter = () => {
         <ProductDetail key={index} product={product} />
       ))}
     </div>
+
+            <button className="scroll-to-top" onClick={scrollToTop}>
+              <FaArrowUp />
+            </button>
 
        <footer className="footer10">
             <div className="footer-top10">

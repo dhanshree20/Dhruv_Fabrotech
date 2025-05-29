@@ -2,6 +2,7 @@ import React from "react"
 import './Bioreactor.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaWhatsapp, FaTwitter, FaPhoneAlt,FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useRef, useEffect, useState } from 'react';
 import ProductDetail from "./ProductDetail";
 import img1 from "../assets/bioreactor1.webp";
 import img2 from "../assets/bioreactor2.webp";
@@ -16,8 +17,26 @@ import img10 from "../assets/bioreactor10.webp";
 import img11 from "../assets/bioreactor11.webp";
 import img12 from "../assets/bioreactor12.webp";
 import img13 from "../assets/bioreactor13.webp";
+import { FaArrowUp } from 'react-icons/fa';
 
 const Bioreactor = () =>{
+
+  
+    // scroll bar
+  
+    const [showScrollTop, setShowScrollTop] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowScrollTop(window.scrollY > 300);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
      const products = [
           {
@@ -292,6 +311,12 @@ const Bioreactor = () =>{
         <ProductDetail key={index} product={product} />
       ))}
     </div>
+
+
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          <FaArrowUp />
+        </button>
+
 
        <footer className="footer10">
             <div className="footer-top10">
