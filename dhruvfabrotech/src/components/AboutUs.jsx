@@ -294,15 +294,15 @@ const InfoTable = ({ title, data }) => (
     </div>
 
 
-<div className="video-section">
+<div className="video-section20">
       <h2>Product Videos</h2>
-      <div className="video-grid">
+      <div className="video-grid20">
         {videos.map((video, index) => (
-          <div className="video-card" key={index}>
+          <div className="video-card20" key={index}>
             <video
               ref={(el) => (videoRefs.current[index] = el)}
               src={video.src}
-              className="video-element"
+              className="video-element20"
               autoPlay
               muted
               loop

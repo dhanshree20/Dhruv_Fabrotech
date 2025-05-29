@@ -269,15 +269,15 @@ const videos = [
 
 
 
-<div className="video-section">
+<div className="video-section10">
       <h2>Product Videos</h2>
-      <div className="video-grid">
+      <div className="video-grid10">
         {videos.map((video, index) => (
-          <div className="video-card" key={index}>
+          <div className="video-card10" key={index}>
             <video
               ref={(el) => (videoRefs.current[index] = el)}
               src={video.src}
-              className="video-element"
+              className="video-element10"
               autoPlay
               muted
               loop
