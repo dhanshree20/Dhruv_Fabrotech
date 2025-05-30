@@ -136,49 +136,52 @@
 }
 
 
-/* part 3 */
+/* part con */
 
-.contact-info-container {
+/* components/SupportBoxes.css */
+.support-container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  
+  gap: 20px;
+  justify-content: center;
   padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-  margin: 20px;
+  background-color: #fdfaf5;
+  flex-wrap: wrap;
 }
 
-.info-card {
-  flex: 1;
-  min-width: 220px;
-  max-width: 300px;
-  margin: 10px;
+.support-box {
+  background-color: #dceeff;
+  border-bottom: 2px solid black;
+  width: 300px;
+  padding: 30px 20px;
+  border-radius: 8px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.icon {
-  font-size: 30px;
-  color: orange;
+.support-box:hover {
+  transform: translateY(-5px);
+}
+
+.support-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: rgb(20, 136, 236);
+}
+
+.support-title {
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-h4 {
-  margin: 0;
-  font-size: 20px;
-  color: #000;
-  font-family: Roboto;
+.support-description {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-p {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #333;
-  line-height: 1.6;
-}
+
 
 
 /* part 4 */
@@ -280,10 +283,11 @@ textarea {
 /* part 4 */
 
 .map-title h1 {
-   text-align: center;
-   font-family: Helvetica;
-   font-size: 36px;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 36px;
 }
+
 .contact-container1 {
   display: flex;
   flex-wrap: wrap;
@@ -370,10 +374,10 @@ textarea {
 }
 
 .footer-bottom400 p {
-    color: rgb(168, 5, 5);
-    font-weight: bold;
-    font-family: Roboto;
-    font-size: 16px;
+  color: rgb(168, 5, 5);
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 16px;
 }
 
 .footer-bottom400 .highlight {
