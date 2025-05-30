@@ -61,7 +61,8 @@ const cardData = [
       'Bioreactors Fermentors System',
       'Bio Fertilizers Manufacturing Plant',
       'Bio Fertilizer Plant 1500 liter/hr'
-    ]
+    ],
+    link: "/batchtype"
   },
     {
     title: 'Pilot Scale Fermentor',
@@ -70,7 +71,8 @@ const cardData = [
       'Microbial Fermenter Production machine',
       'Continuous Fermenter machine',
       'Low Cost Biofertilizer Production Machinery'
-    ]
+    ],
+    link: "/pilotcsale"
   },
     {
     title: 'Fermenter Machine',

@@ -8,6 +8,8 @@ import Product from './components/Product';
 import IndustrialFermenter from './components/IndustrialFermenter';
 import LaboratoryFermenter from './components/LaboratoryFermenter';
 import Bioreactor from './components/Bioreactor';
+import BatchTypeFermenter from './components/BatchTypeFermenter';
+import PilotScale from './components/PilotScale';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path="/industrial" Component={IndustrialFermenter} />
         <Route path="/laboratory" Component={LaboratoryFermenter} />
         <Route path="/bioreactor" Component={Bioreactor} />
+        <Route path="/batchtype"  Component={BatchTypeFermenter} />
+        <Route path="/pilotcsale" Component={PilotScale} />
       </Routes>
     </Router>
  
