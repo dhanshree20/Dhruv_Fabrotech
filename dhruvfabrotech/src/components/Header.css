@@ -51,23 +51,23 @@ header {
   margin-left: 10px;
 }
 
-.nav-links {
+.nav-links10 {
   display: flex;
   gap: 65px;
   align-items: center;
   flex-grow: 1;
   justify-content: center;
-  font-family: Roboto;
+  font-family: Poppins;
   font-size: 18px;
 }
 
-.nav-links a {
+.nav-links10 a {
   text-decoration: none;
   color: rgb(57, 57, 57);
   font-weight: bold;
 }
 
-.nav-links a:hover {
+.nav-links10 a:hover {
   color: #0594ec;
 }
 
@@ -144,10 +144,10 @@ header {
   cursor: pointer;
   transition: background 0.3s ease;
   margin-right: 10px;
+  margin-top: 30px;
 }
 .Know-more:hover{
   background-color: white;
-  border: 1px solid rgb(168, 5, 5);
   color: rgb(168, 5, 5);
 }
 

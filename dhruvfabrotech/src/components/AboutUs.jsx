@@ -384,7 +384,7 @@ const InfoTable = ({ title, data }) => (
           </div>
     
           <div className="footer-bottom200">
-            <p>©DHRUV FABROTECH. All Rights Reserved (Terms of Use) Made By<span className="highlight"> DW Innovation</span></p>
+            <p>©DHRUV FABROTECH. All Rights Reserved (Terms of Use) Made By<span className="highlight"> DW INNOVATION PVT. LTD.</span></p>
             <div className="social-icons1">
               <FaFacebook />
               <FaInstagram />

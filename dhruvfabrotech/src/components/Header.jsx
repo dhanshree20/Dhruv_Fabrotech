@@ -196,7 +196,7 @@ const videos = [
         <div className="logo">
           <img src="/dhruvfabrotechlogo.webp" alt="dhruvfabrotechlogo" />
         </div>
-        <nav className="nav-links">
+        <nav className="nav-links10">
           <Link to = "/">HOME</Link>
           <Link to = "/about">ABOUT</Link>
           <Link to = "/product">PRODUCT</Link>
@@ -384,7 +384,7 @@ const videos = [
       </div>
 
       <div className="footer-bottom100">
-        <p>©DHRUV FABROTECH. All Rights Reserved (Terms of Use) Made By<span className="highlight"> DW Innovation</span></p>
+        <p>©DHRUV FABROTECH. All Rights Reserved (Terms of Use) Made By<span className="highlight"> DW INNOVATION PVT. LTD.</span></p>
         <div className="social-icons1">
           <FaFacebook />
           <FaInstagram />
