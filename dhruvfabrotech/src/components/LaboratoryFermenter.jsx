@@ -319,7 +319,7 @@ const LaboratoryFermenter = () => {
                 <Link to = "/">HOME</Link>
                 <Link to = "/about">ABOUT</Link>
                 <Link to = "/product">PRODUCT</Link>
-                <Link to = "/contact">CONTACT</Link>
+                
       
               </nav>
               <Link to= "/contact">
@@ -346,6 +346,20 @@ const LaboratoryFermenter = () => {
               <FaArrowUp />
             </button>
 
+
+<a
+      href="https://wa.me/919999999999" // Replace with your WhatsApp number
+      className="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png"
+        alt="WhatsApp"
+        className="whatsapp-icon"
+      />
+    </a>
+    
        <footer className="footer10">
             <div className="footer-top10">
               <div className="footer-column">
